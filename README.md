@@ -12,8 +12,11 @@ Thanks to glh3 for their original work on feature interface https://github.com/g
 #usage
 
 test_xgboost_pandas.py: the cross validation script
+
 higgs-numpy_pandas.py: the model generating script
+
 higgs-pred_pandas.py: the submission generating script
+
 run.all.sh: a simple script of generating model and generating submission
 
 By running the default parameter of 3000 steps and max_depth of 9, one can reproduce the current best leaderboard score of 3.73 which is ranked 25th/1792

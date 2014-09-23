@@ -45,13 +45,14 @@ def get_training_data(training_file, test_file):
     cols_new = df_new.columns.tolist()
     cols_new = cols_new[:32]+cols_new[33:]+[cols_new[32]] #make the weight to the last
     #the ending comma!!
+    #only remove phi and tau,lep eta
     black_list = ['PRI_met_phi', 'PRI_lep_phi', 'PRI_tau_phi', 'PRI_jet_leading_phi','PRI_jet_subleading_phi',
                   'PRI_tau_eta','PRI_lep_eta',
-                  'PRI_jet_leading_eta','PRI_jet_subleading_eta',#replace with abs values
-                  'PRI_lep_px','PRI_lep_py','PRI_lep_pz', 'PRI_lep_px_abs','PRI_lep_py_abs',#these raw values are noisy
-                  'PRI_tau_px','PRI_tau_py','PRI_tau_pz', 'PRI_tau_pz_abs', 
-                  'PRI_jet_leading_px','PRI_jet_leading_py','PRI_jet_leading_pz', #leading pxyz has separation but abs
-                  'PRI_jet_subleading_px','PRI_jet_subleading_py','PRI_jet_subleading_pz',
+                  #'PRI_jet_leading_eta','PRI_jet_subleading_eta',#replace with abs values
+                  #'PRI_lep_px','PRI_lep_py','PRI_lep_pz', 'PRI_lep_px_abs','PRI_lep_py_abs',#these raw values are noisy
+                  #'PRI_tau_px','PRI_tau_py','PRI_tau_pz', 'PRI_tau_pz_abs', 
+                  #'PRI_jet_leading_px','PRI_jet_leading_py','PRI_jet_leading_pz', #leading pxyz has separation but abs
+                  #'PRI_jet_subleading_px','PRI_jet_subleading_py','PRI_jet_subleading_pz',
                   ] 
     #experiment if these phi values makes no sense: TRUE phi itself is really noisy as expected
     cols_new = [c for c in cols_new if c not in black_list]
