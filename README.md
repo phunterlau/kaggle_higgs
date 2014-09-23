@@ -11,7 +11,7 @@ Thanks to glh3 for their original work on feature interface https://github.com/g
 
 #usage
 
-test_xgboost_pandas.py: the cross validation script
+test_xgboost_pandas.py: the cross validation script. the original version is from Kaggle forum https://www.kaggle.com/c/higgs-boson/forums/t/8207/to-ams-3-6-model-can-you-share-you-local-cv-score/44825#post44825
 
 higgs-numpy_pandas.py: the model generating script
 
